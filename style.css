@@ -47,7 +47,7 @@ html {
 
 .centerdiv {
     position: relative;
-    background-color: rgb(105, 214, 112);
+    background-color: rgb(67, 224, 75);
     z-index: 2;
     max-width: 600px;
 }
@@ -77,17 +77,6 @@ html {
     animation: slideIn 1s ease-out forwards;
 
 }
-/* Basic styling for the container and content */
-.contact-info {
-    background-color: #b9b9b9; /* Light background */
-    border: 1px solid #ddd; /* Subtle border */
-    border-radius: 8px; /* Rounded corners */
-    padding: 20px; /* Space inside the div */
-    max-width: 500px; /* Limit the width */
-    font-family: 'Arial', sans-serif; /* Clean font */
-    margin: 0 auto; /* Center the container */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
-}
 
 .info-label i {
     margin-right: 10px; /* Space between icon and text */
@@ -99,7 +88,16 @@ html {
     height: 70%;
 }
 
+  
+  #mybutton {
+    position: fixed;
+    bottom: -2px;
 
+  }
+.icon{
+    width: 15%;
+    height: auto;
+}
 /* Responsive styling */
 @media (max-width: 600px) {
     .contact-info {
