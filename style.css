@@ -1,0 +1,580 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Press+Start+2P&family=Pacifico&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+#loader {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    display: none; 
+}
+
+#loader img {
+    width: 100px; /* Adjust the size of your logo */
+    height: auto;
+}
+
+/* Hide content while loading */
+.loading .intro {
+    display: none;
+}
+
+.intro {
+    position: relative;
+    background-image: url('images/main.jpg');
+    background-size: cover;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+
+}
+
+.intro::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+   
+    z-index: 1;
+}
+
+.centerdiv {
+    position: relative;
+    background-color: rgb(105, 214, 112);
+    z-index: 2;
+    max-width: 600px;
+}
+
+  .check  ul {
+        list-style-position: outside; 
+        margin-left: 10px; /* Adjust to your preference */
+    }
+    
+    .check  li {
+        font-family: 'YourPreferredFont', sans-serif;
+        font-size: 16px;
+        line-height: 1.5; /* Adjust line height */
+        margin-bottom: 10px; /* Space between items */
+        text-indent: -20px; /* For hanging indentation if needed */
+        padding-left: 20px; /* Align text properly */
+    }
+    
+
+
+/* Intro 1 Styles */
+#intro1 {
+    font-size: 3rem;
+    font-family: 'Amatic SC', cursive; /* Playful and handwritten style */
+    color: green;
+    font-weight: 800;
+    animation: slideIn 1s ease-out forwards;
+
+}
+/* Basic styling for the container and content */
+.contact-info {
+    background-color: #b9b9b9; /* Light background */
+    border: 1px solid #ddd; /* Subtle border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Space inside the div */
+    max-width: 500px; /* Limit the width */
+    font-family: 'Arial', sans-serif; /* Clean font */
+    margin: 0 auto; /* Center the container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.info-label i {
+    margin-right: 10px; /* Space between icon and text */
+}
+.imgs{
+    padding: 1rem;}
+.imgs img{
+    width: 100%;
+    height: 70%;
+}
+
+
+/* Responsive styling */
+@media (max-width: 600px) {
+    .contact-info {
+        padding: 15px; /* Reduce padding for smaller screens */
+        max-width: 100%; /* Full width on small screens */
+        box-shadow: none; /* Remove shadow for a simpler look */
+    }
+
+    .info-label {
+        font-size: 14px; /* Slightly smaller text */
+        line-height: 1.4; /* Adjust line height */
+    }
+
+    .info-label i {
+        margin-right: 8px; /* Adjust spacing for smaller screens */
+    }
+
+    .contact-info h3 {
+        font-size: 18px; /* Smaller heading for mobile */
+        margin-bottom: 15px; /* Adjust margin */
+    }
+}
+
+
+/* Intro 2 Styles */
+#intro2 {
+    font-size: 1.5rem;
+    font-family: 'Press Start 2P', cursive; /* Retro, 8-bit style */
+    color: black;
+    animation: slideIn 1.5s ease-out forwards;
+}
+
+/* Intro 3 Styles */
+#intro3 {
+    font-size: 1rem;
+    font-family: 'Pacifico', cursive; /* Smooth, script style */
+    color: black;
+    animation: slideIn 2s ease-out forwards;
+}
+
+/* Slide-in Animation */
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.category{
+    margin-top: 10px;
+    text-align: center;
+}
+.card-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(25% - 20px);
+    max-width: calc(25% - 20px);
+    box-sizing: border-box;
+    text-align: center;
+    color: white; /* Ensure text is readable on dark backgrounds */
+}
+
+/* Card 1: Blue to Green Gradient */
+.card1 {
+    background: linear-gradient(135deg, rgba(0, 128, 255, 0.7), rgba(25, 50, 38, 0.7));
+}
+
+/* Card 2: Orange to Brown Gradient */
+.card2 {
+    background: linear-gradient(135deg, rgba(255, 165, 0, 0.7), rgba(139, 69, 19, 0.7));
+}
+
+/* Card 3: Black to Green Gradient */
+.card3 {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 128, 0, 0.7));
+}
+
+/* Card 4: Black to Blue Gradient */
+.card4 {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 255, 0.7));
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .card {
+        flex: 1 1 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+.discover-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent; /* Transparent background */
+    border: 2px solid black; /* Black border */
+    color: black; /* Text color */
+    padding: 10px 20px;
+    border-radius: 25px; /* Rounded corners */
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s;
+    max-width: 200px; /* Set a maximum width for the button */
+}
+
+/* Position the button to the right */
+.discover-button {
+    float: left; /* Float to the right side */
+}
+
+.discover-button:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Slight background color change on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+.discover-button svg {
+    margin-left: 10px;
+    stroke: black; /* Arrow color */
+    transition: transform 0.3s;
+}
+
+.discover-button:hover svg {
+    transform: translateX(5px); /* Arrow slide effect */
+}
+
+#aboutus {
+    padding: 20px;
+}
+
+.wrap-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap onto new lines */
+    gap: 20px; /* Space between items */
+    justify-content: center; /* Center items horizontally */
+}
+
+.item {
+    flex: 1 1 300px; /* Grow and shrink, with a base size of 300px */
+    background-color: #f9f9f9; /* Light background for contrast */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+}
+
+.item img {
+    max-width: 100%; /* Makes sure images fit within their container */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 8px; /* Rounded corners for images */
+    margin-bottom: 15px; /* Space between image and text */
+}
+
+.item h3 {
+    margin: 10px 0; /* Space above and below the heading */
+    font-size: 1.5rem; /* Adjust heading size */
+}
+
+.item p {
+    font-size: 1rem; /* Adjust paragraph size */
+    line-height: 1.6; /* Improve readability */
+}#intro-section {
+    background-color: #f4f4f9; /* Light background color */
+    padding: 40px 20px; /* Padding around the section */
+    text-align: center; /* Center align text */
+}
+
+.intro-content {
+    max-width: 800px; /* Limit the width of the content */
+    margin: 0 auto; /* Center the content horizontally */
+}
+
+
+
+.intro-paragraph {
+    font-family: 'Quicksand', sans-serif; /* Modern and friendly paragraph font */
+    font-size: 1.2rem; /* Size of the paragraph text */
+    color: #555; /* Medium grey color for the text */
+    line-height: 1.6; /* Line height for readability */
+    margin: 0 auto; /* Center the paragraph */
+    width: 90%; /* Responsive width */
+    max-width: 700px; /* Max width for larger screens */
+}
+.contact{
+    margin-top: 10px;
+   
+}
+#contact-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 20px;
+}
+
+.contact-form-container, .map-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 45%;
+}
+
+.contact-form-container h2, .map-container h2 {
+    margin-top: 0;
+    font-size: 2rem;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    background-color: transparent;
+    color: black;
+    border: 1px solid thick;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: 'Pacifico', cursive; 
+}
+
+button:hover {
+    background-color: #393c3e;
+    color: white;
+}
+
+#map {
+    height: 400px; /* Adjust the height of the map */
+    border-radius: 8px;
+}
+.contact-info {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   
+    text-align: center;
+}
+
+.whatsapp-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #25D366; /* WhatsApp green color */
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+.whatsapp-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
+.whatsapp-link:hover {
+    text-decoration: underline;
+}
+/* Footer Styling */
+/* Footer Styling */
+#footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    width: 100%;
+}
+.introcon{
+    margin-top: 5rem;
+}
+.typop{
+    font-size: 1.5rem;
+}
+.imgop{
+    text-align: center;
+}
+.footer-content {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap onto the next line if needed */
+    justify-content: space-between; /* Space out items */
+    align-items: flex-start; /* Align items at the top of the container */
+    gap: 20px; /* Space between items */
+}
+
+.footer-item {
+    flex: 1; /* Allow items to grow and shrink as needed */
+    min-width: 200px; /* Minimum width for each item */
+    margin: 10px;
+}
+
+.footer-logo {
+    width: 100px; /* Adjust based on your logo size */
+    height: auto;
+}
+
+.contact-details, .footer-links {
+    font-size: 1rem;
+}
+
+.contact-details a, .footer-links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.contact-details a:hover, .footer-links a:hover {
+    text-decoration: underline;
+}
+
+.socials {
+    display: flex;
+    gap: 15px; /* Space between social media icons */
+}
+
+.social-icon img {
+    width: 24px;
+    height: 24px;
+    transition: opacity 0.3s;
+}
+
+.social-icon img:hover {
+    opacity: 0.8;
+}
+
+.footer-links ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin: 5px 0;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+.services{
+    margin-top: 10px;
+    text-align: center;
+}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 16px;
+    justify-content: center; /* Centers the items horizontally */
+}
+
+.gallery-item {
+    position: relative;
+    width: 300px; /* Adjust as needed */
+    height: 200px; /* Adjust as needed */
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(231, 228, 228, 0.5);
+    color: rgb(59, 55, 55);
+    padding: 10px;
+    text-align: center;
+}
+
+.gallery-text h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.gallery-button {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 8px 16px;
+    color: white;
+    background: #007bff; /* Button color */
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.gallery-button:hover {
+    background: #0056b3; /* Darker shade on hover */
+}
+.slider-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slider-item {
+    flex: 0 0 20%;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    background: #f9f9f9;
+    font-size: 1.2em;
+}
+
+.slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.slider-button.prev {
+    left: 10px;
+}
+
+.slider-button.next {
+    right: 10px;
+}
